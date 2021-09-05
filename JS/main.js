@@ -4,7 +4,10 @@ const numberElement = document.querySelector('.js_number');
 const buttonElement = document.querySelector('.js_button');
 const textElement = document.querySelector('.js_text');
 const counterElement = document.querySelector('.js_counter');
-const getRandomNumber = Math.ceil(Math.random() * 100); //Aqui decidimos hacer una constante de la función para sacar el número aleatorio, y que no se cambie a no ser que la página se refresque 
+function RandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+    }
+const getRandomNumber = RandomNumber(100); //Aqui decidimos hacer una constante de la función para sacar el número aleatorio, y que no se cambie a no ser que la página se refresque 
 console.log(`El número aleatorio es ${getRandomNumber}`);
 
 //Funciones: 
@@ -13,6 +16,8 @@ console.log(`El número aleatorio es ${getRandomNumber}`);
 function startCounter() {
     counterElement.innerHTML = `${parseInt(counterElement.innerHTML) + 1}`;
 }
+
+
 //Ahora haremos la función de la pista 
 function giveClue() {
     const numberValue = parseInt(numberElement.value); //Esto lo hacemos para poder convertir el string a un número entero
@@ -34,7 +39,8 @@ function giveClue() {
 }
 
 //Por último unimos las funciones en otra, en la cual estará el evento
-function handleTheButton() {
+function handleTheButton(ev) {
+    ev.preventDefault()
     startCounter()
     giveClue()
 }
