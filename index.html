@@ -4,6 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evaluación intermedia</title>
+    <!-- Icono -->
+    <link rel="icon" href="./2c3394ec92a966814888c7e3b9a76d8b.png" />
+    <!-- Letras  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Estilos css -->
     <link rel="stylesheet" href="./CSS/reset.css" />
     <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
@@ -15,29 +32,31 @@
     <main class="main">
       <section>
         <h2 class="main__tittle">¡Bienvenido al juego!</h2>
-        Este juego es muy fácil, Se va a generar un número aleatorio entre el 0
-        y el 100 y tú tendras que adivinarlo, mientras tanto yo te daré pistas y
-        te contaré las veces que lo intentas.
-        <span>¿Serás capaz de adivinarlo a la primera?</span>
+        <p class="p">
+          Este juego es muy fácil, Se va a generar un número aleatorio entre el
+          0 y el 100 y tú tendras que adivinarlo, mientras tanto yo te daré
+          pistas y te contaré las veces que lo intentas.
+        </p>
+
+        <span class="text">¿Serás capaz de adivinarlo a la primera?</span>
       </section>
       <form class="form">
-        <label
-          for="
-        number"
-        >
-          Introduce aquí tu número:
-        </label>
-        <input type="text" id="number" class="box js_number" />
+        <div class="form__container">
+          <label for="number" class="label"> Introduce aqui tu número: </label>
+          <input type="text" id="number" class="box js_number" />
+        </div>
         <input type="button" value="Prueba" class="button js_button" />
       </form>
       <section class="container">
         <div>
-          <h2>Pista:</h2>
-          <span class="js_text">Escribe tu número y dale a Prueba</span>
+          <h2 class="container__tittle">Pista:</h2>
+          <span class="container__text js_text"
+            >Escribe tu número y dale a Prueba</span
+          >
         </div>
         <div>
-          <h2>Número de intentos:</h2>
-          <span class="js_counter">0</span>
+          <h2 class="container__tittle">Número de intentos:</h2>
+          <span class="container__text js_counter">0</span>
         </div>
       </section>
     </main>

@@ -24,16 +24,25 @@ function giveClue() {
     // Esto no es necesario: console.log(numberValue);
     if (numberValue > 100 || numberValue < 0 || numberValue === isNaN) {
         textElement.innerHTML = 'El número debe estar entre 1 y 100'
+        textElement.classList.remove('success')
+        textElement.classList.remove('error')
     } else if (isNaN(parseInt(numberValue))) {
         textElement.innerHTML = ' Debes escribir un número'
+        textElement.classList.remove('success')
+        textElement.classList.remove('error')
 
     }
     else if (numberValue < getRandomNumber) {
         textElement.innerHTML = ' Demasiado bajo'
+        textElement.classList.remove('success')
+        textElement.classList.add('error')
+        
     } else if (numberValue > getRandomNumber) {
         textElement.innerHTML = 'Demasiado alto'
+        textElement.classList.add('error')
     } else if (numberValue === getRandomNumber) {
         textElement.innerHTML = '¡¡¡Has ganado campeona!!'
+        textElement.classList.add('success')
     }
 
 }

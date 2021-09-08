@@ -1,35 +1,103 @@
+/* Animaciones:  */
+@keyframes zaas {
+  0% {
+    transform: translate3d(1000px, -150px, 0px);
+  }
+  50% {
+    transform: scale3d(1.8, 1.8, 1.8);
+  }
+}
+
 body {
-  background: #e6eaea;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ececec;
+  font-family: "Varela Round", sans-serif;
   margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
 }
 
 .tittle {
-  font-size: 40px;
-  color: #535353;
+  font-size: 50px;
+  color: #1b2f50;
+  font-family: "Rampart One", cursive;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .main__tittle {
+  text-align: center;
+  font-size: 40px;
+  color: #1d4a4e;
+  animation: 3s 1 zaas;
+}
+.p {
+  padding-top: 20px;
+  padding-bottom: 10px;
   font-size: 26px;
+  text-align: center;
+}
+.text {
+  font-size: 30px;
+  color: #204e35;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-top: 100px;
+  text-align: center;
+  padding-left: 10px;
 }
 .form {
+  font-size: 26px;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  font-size: 25px;
+  align-items: center;
+  padding-right: 200px;
+}
+.form__container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 200px;
+  width: 100px;
+}
+.label {
+  padding-bottom: 20px;
+  width: 400px;
+  text-align: center;
+  font-size: 30px;
 }
 .box {
-  height: 30px;
-  width: 20vw;
   background: #f1f1f1;
+  height: 50px;
+  width: auto;
+  font-size: 25px;
 }
 .button {
+  margin-left: 200px;
   border-radius: 10;
-  width: 85px;
-  background: #9cd4d8;
+  width: 150px;
+  height: 50px;
+  background: #5ab5b6;
   order: solid 2px #9cd4d8;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 30px;
 }
-.container {
-  font-size: 25px;
+
+.container__tittle {
+  font-size: 30px;
+  padding-top: 20px;
+}
+.container__text {
+  font-size: 26px;
+}
+.error {
+  color: #81110a;
+  font-weight: 900;
+}
+.success {
+  color: #286e47;
+  font-weight: 900;
+  font-size: 50px;
 }
